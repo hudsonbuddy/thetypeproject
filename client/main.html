@@ -4,10 +4,16 @@
 
 <body>
   <h1>Welcome to The Type Project homepage!</h1>
-
-  {{> hello}}
-  {{> info}}
+  {{> search}}
 </body>
+
+<template name="search">
+    <input type="text" name="input_search" class="form-control"  placeholder="Search our database...">
+    {{#each types}}
+        <li>asdfasdf {{type}} </li>
+        <li>{{personality}}</li>
+    {{/each}}
+</template>
 
 <template name="hello">
   {{#each types}}

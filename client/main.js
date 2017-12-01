@@ -15,3 +15,43 @@ Template.hello.helpers({
 
 Template.hello.events({
 });
+
+Template.search.onCreated( () => {
+    let template = Template.instance();
+        template.searchQuery = new ReactiveVar();
+        template.autorun( () => {
+
+            template.subscribe( 'types_publish', template.searchQuery.get(), () => {
+
+            });
+
+            console.log('happening status: happening');
+        });
+});
+
+Template.search.helpers({
+    query() {
+        return Template.instance().searchQuery.get();
+    },
+    types() {
+        let types = Types.find();
+        if ( types ) {
+            return types;
+        }
+    }
+});
+
+Template.search.events({
+    'keyup [name="input_search"]' ( event, template ) {
+        let value = event.target.value.trim();
+        if ( value !== '' && event.keyCode === 13 ) {
+            template.searchQuery.set( value );
+        }
+
+        if ( value === '' ) {
+            template.searchQuery.set( value );
+        }
+    }
+});
+
+
