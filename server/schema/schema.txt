@@ -1,0 +1,38 @@
+{ 
+    "persons" : {
+        "first_name" : "String",
+        "last_name" : "String",
+        "birthday" : "DateTime",
+        "relationships" : {
+            "person_id" : "Object_ID",
+            "relation" : "String"
+        },
+        "personality_type" : "String",
+        "confidence_level" : "Integer",
+        "references" : {
+            "media_type" : "String",
+            "url" : "URL",
+            "timestamp" : "String"
+        },
+        "mass" : "Integer",
+        "created_at" : "DateTime"
+
+    }
+}
+
+
+{
+    "personality_types" : {
+        "type" : "String",
+        "charge" : "String",
+        "input" : "String",
+        "output" : "String",
+        "spin" : "String"
+    }
+}
+
+
+
+
+
+

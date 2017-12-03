@@ -1,6 +1,6 @@
-import { Types } from '../../imports/api/collections.js';
+import { Humans } from '../../imports/api/collections.js';
 
-Meteor.publish( 'types_publish', function( search ) {
+Meteor.publish( 'humans_publish', function( search ) {
     check(search, Match.OneOf( String, null, undefined ) );
     let query = {},
     projection = { limit: 10, sort: { type: 1 } };
@@ -9,13 +9,12 @@ Meteor.publish( 'types_publish', function( search ) {
         let regex = new RegExp( search, 'i' );
         query = {
             $or: [
-                { type: regex },
                 { name: regex },
-                { personality: regex }
+                { type: regex }
             ]
         };
         projection.limit = 100;
     }
 
-    return Types.find( query, projection );
+    return Humans.find( query, projection );
 });

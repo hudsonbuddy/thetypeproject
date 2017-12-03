@@ -1,0 +1,17 @@
+id,type,charge,input,output,spin
+1,ISTJ,I,S,T,J
+2,ISFJ,I,S,F,J
+3,ESTP,E,S,T,P
+4,ESFP,E,S,F,P
+5,ESTJ,E,S,T,J
+6,ESFJ,E,S,F,J
+7,ISTP,I,S,T,P
+8,ISFP,I,S,F,P
+9,ENTJ,E,N,T,J
+10,ENFJ,E,N,F,J
+11,INTP,I,N,T,P
+12,INFP,I,N,F,P
+13,ENTP,E,N,T,P
+14,ENFP,E,N,F,P
+15,INTJ,I,N,T,J
+16,INFJ,I,N,F,J
