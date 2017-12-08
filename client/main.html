@@ -4,11 +4,13 @@
 
 <body>
   <h1>Welcome to The Type Project homepage!</h1>
-  {{> type_search}}
   {{> search}}
 </body>
 
 <template name="search">
+    {{#each types}}
+        <a href='#'>{{type}}</a>
+    {{/each}}
     <input type="text" name="input_search" class="form-control"  placeholder="Search our database...">
     {{#each humans}}
         <li>{{name}} </li>
@@ -16,12 +18,6 @@
     {{/each}}
 </template>
 
-
-<template name="type_search">
-    {{#each types}}
-        <a>{{type}}</a>
-    {{/each}}
-</template>
 
 
 

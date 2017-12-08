@@ -16,6 +16,7 @@ Template.search.onCreated( () => {
 
             console.log('happening status: happening');
         });
+        template.subscribe('types_publish');
 });
 
 Template.search.helpers({
@@ -46,23 +47,16 @@ Template.search.events({
         if ( value === '' ) {
             template.searchQuery.set( value );
         }
-    }
-});
-
-
-Template.type_search.onCreated(function typeSearchOnCreated()  {
-
-    Meteor.subscribe('types_publish');
-});
-
-Template.type_search.helpers({
-    types() {
-        return Types.find();
     },
+    'click a' (event, template) {
+        let value = event.target.text;
+        Template.instance('search').searchQuery.set(value);
+        console.log(value);
+    }
+
 });
 
-Template.type_search.events({
-});
+
 
 
 
