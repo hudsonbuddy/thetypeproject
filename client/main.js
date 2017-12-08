@@ -3,6 +3,8 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import { Types } from '../imports/api/collections.js';
 import { Humans } from '../imports/api/collections.js';
 
+import '../imports/paper-full.js';
+import '../imports/drawPath.js';
 import './main.html';
 
 Template.search.onCreated( () => {

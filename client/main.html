@@ -5,6 +5,7 @@
 <body>
   <h1>Welcome to The Type Project homepage!</h1>
   {{> search}}
+  {{> pathPage}}
 </body>
 
 <template name="search">
@@ -18,7 +19,14 @@
     {{/each}}
 </template>
 
-
+<template name="pathPage">
+<h1>Path</h1>
+{{> pathCanvasTemplate}}
+</template>
+ 
+ <template name="pathCanvasTemplate">
+         <canvas id="pathCanvas" width="500" height="500"></canvas>
+</template>
 
 
 
