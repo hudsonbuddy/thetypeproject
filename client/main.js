@@ -5,18 +5,6 @@ import { Humans } from '../imports/api/collections.js';
 
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-});
-
-Template.hello.helpers({
-    types() {
-        return Types.find({});
-    },
-});
-
-Template.hello.events({
-});
-
 Template.search.onCreated( () => {
     let template = Template.instance();
         template.searchQuery = new ReactiveVar();
@@ -60,5 +48,21 @@ Template.search.events({
         }
     }
 });
+
+
+Template.type_search.onCreated(function typeSearchOnCreated()  {
+
+    Meteor.subscribe('types_publish');
+});
+
+Template.type_search.helpers({
+    types() {
+        return Types.find();
+    },
+});
+
+Template.type_search.events({
+});
+
 
 

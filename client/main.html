@@ -4,6 +4,7 @@
 
 <body>
   <h1>Welcome to The Type Project homepage!</h1>
+  {{> type_search}}
   {{> search}}
 </body>
 
@@ -15,12 +16,13 @@
     {{/each}}
 </template>
 
-<template name="hello">
-  {{#each types}}
-      <li>asdfasdf {{type}} </li>
-      <li>{{personality}}</li>
-  {{/each}}
+
+<template name="type_search">
+    {{#each types}}
+        <a>{{type}}</a>
+    {{/each}}
 </template>
 
-<template name="info">
-</template>
+
+
+
