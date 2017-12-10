@@ -55,23 +55,22 @@ Template.search.events({
     'click a' (event, template) {
         let value = event.target.text;
         Template.instance('search').searchQuery.set(value);
+        if (paper.project.activeLayer.lastChild.name === 'typeLine'){
+
+            paper.project.activeLayer.lastChild.remove();
+            
+        }
+
         drawTypeLine(value);
         console.log(value);
     }
 
 });
 
-
-
-
 Template.pathPage.rendered = function() {
     if(!this._rendered) {
         this._rendered = true;
         setupPlane();
-        
-        //test drawTypeLine
-
-        drawTypeLine('ESTJ');
     }
 }
 
@@ -130,6 +129,7 @@ function setupPlane(){
  
 function drawTypeLine(type){
 
+
     var typeLine;
     var leftArrow;
     var rightArrow;
@@ -159,8 +159,8 @@ function drawTypeLine(type){
     typeLineGroup.style = {
         strokeColor : 'black'
     };
+    typeLineGroup.name = 'typeLine';
 
-    typeLine.strokeColor = 'black';
 
 }
 
