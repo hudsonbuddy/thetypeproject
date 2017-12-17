@@ -1,6 +1,6 @@
-import { Humans } from '../../imports/api/collections.js';
+import { People } from '../../imports/api/collections.js';
 
-Meteor.publish( 'humans_publish', function( search ) {
+Meteor.publish( 'people_publish', function( search ) {
     check(search, Match.OneOf( String, null, undefined ) );
     let query = {},
     projection = { limit: 10, sort: { type: 1 } };
@@ -16,5 +16,5 @@ Meteor.publish( 'humans_publish', function( search ) {
         projection.limit = 100;
     }
 
-    return Humans.find( query, projection );
+    return People.find( query, projection );
 });

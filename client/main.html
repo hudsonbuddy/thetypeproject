@@ -1,19 +1,29 @@
 <head>
-  <title>thetypeproject</title>
+    <title>thetypeproject</title>
 </head>
 
 <body>
-  <h1>Welcome to The Type Project homepage!</h1>
-  {{> search}}
-  {{> pathPage}}
+    <h1>Welcome to The Type Project homepage!</h1>
+    {{> search}}
+    {{> pathPage}}
 </body>
 
 <template name="search">
+    <div id='type_bar'>
+        <div id='sanguine'>
+        </div>
+        <div id='phlegmatics'>
+        </div>
+        <div id='cholerics'>
+        </div>
+        <div id='melancholics'>
+        </div>
+    </div>
     {{#each types}}
         <a href='#'>{{type}}</a>
     {{/each}}
     <input type="text" name="input_search" class="form-control"  placeholder="Search our database...">
-    {{#each humans}}
+    {{#each people}}
         <li>{{name}} </li>
         <li>{{type}}</li>
     {{/each}}

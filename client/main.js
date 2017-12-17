@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Types } from '../imports/api/collections.js';
-import { Humans } from '../imports/api/collections.js';
+import { People } from '../imports/api/collections.js';
 
 //importing paper.js
 import '../imports/paper-full.js';
@@ -14,7 +14,7 @@ Template.search.onCreated( () => {
         template.searchQuery = new ReactiveVar();
         template.autorun( () => {
 
-            template.subscribe( 'humans_publish', template.searchQuery.get(), () => {
+            template.subscribe( 'people_publish', template.searchQuery.get(), () => {
 
             });
 
@@ -33,12 +33,24 @@ Template.search.helpers({
             return types;
         }
     },
-    humans() {
-        let humans = Humans.find();
-        if ( humans ) {
-            return humans;
+    people() {
+        let people = People.find();
+        if ( people ) {
+            return people;
         }
-    } 
+    },
+    sanguines() {
+        
+    },
+    phlegmatics() {
+
+    },
+    cholerics() {
+
+    },
+    melancholics() {
+
+    }
 });
 
 Template.search.events({
