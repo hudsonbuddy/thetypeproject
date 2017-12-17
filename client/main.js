@@ -142,6 +142,13 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(400, 200), new paper.Point(400,210));
             leftArrow.rotate(45, new paper.Point(400, 200));
             rightArrow.rotate(95, new paper.Point(400, 200));
+            var typeLabel = new paper.PointText({
+                content: 'ISTJ',
+                point: new paper.Point(390, 190),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
             break;
         case "ESTJ":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(450,150));
@@ -149,6 +156,13 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(450, 150), new paper.Point(450,160));
             leftArrow.rotate(45, new paper.Point(450, 150));
             rightArrow.rotate(95, new paper.Point(450, 150));
+            var typeLabel = new paper.PointText({
+                content: 'ESTJ',
+                point: new paper.Point(430, 130),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
             break;
         case "ENFP":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(350, 50));
@@ -156,6 +170,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(350, 50), new paper.Point(350, 60));
             leftArrow.rotate(1, new paper.Point(350, 50));
             rightArrow.rotate(55, new paper.Point(350, 50));
+            var typeLabel = new paper.PointText({
+                content: 'ENFP',
+                point: new paper.Point(340, 35),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "INFP":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(300, 100));
@@ -163,6 +185,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(300, 100), new paper.Point(300, 110));
             leftArrow.rotate(-15, new paper.Point(300, 100));
             rightArrow.rotate(55, new paper.Point(300, 100));
+            var typeLabel = new paper.PointText({
+                content: 'INFP',
+                point: new paper.Point(290, 90),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         //Phlegmatics            
         case "ISFJ":
@@ -171,6 +201,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(150, 200), new paper.Point(150, 210));
             leftArrow.rotate(-85, new paper.Point(150, 200));
             rightArrow.rotate(-15, new paper.Point(150, 200));
+            var typeLabel = new paper.PointText({
+                content: 'ISFJ',
+                point: new paper.Point(140, 190),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "ESFJ":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(200, 150));
@@ -178,6 +216,13 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(200, 150), new paper.Point(200, 160));
             leftArrow.rotate(-75, new paper.Point(200, 150));
             rightArrow.rotate(15, new paper.Point(200, 150));
+            var typeLabel = new paper.PointText({
+                content: 'ESFJ',
+                point: new paper.Point(160, 130),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
             break;
         case "ENTP":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(100, 50));
@@ -185,6 +230,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(100, 50), new paper.Point(100, 60));
             leftArrow.rotate(-5, new paper.Point(100, 50));
             rightArrow.rotate(-55, new paper.Point(100, 50));
+            var typeLabel = new paper.PointText({
+                content: 'ENTP',
+                point: new paper.Point(75, 40),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "INTP":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(50, 100));
@@ -192,6 +245,13 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(50, 100), new paper.Point(50, 110));
             leftArrow.rotate(-85, new paper.Point(50, 100));
             rightArrow.rotate(-15, new paper.Point(50, 100));
+            var typeLabel = new paper.PointText({
+                content: 'INTP',
+                point: new paper.Point(30, 85),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
             break;
 
         //Melancholics
@@ -201,6 +261,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(100, 300), new paper.Point(100, 310));
             leftArrow.rotate(-85, new paper.Point(100, 300));
             rightArrow.rotate(-145, new paper.Point(100, 300));
+            var typeLabel = new paper.PointText({
+                content: 'ESTP',
+                point: new paper.Point(60, 330),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "ISTP":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(50, 350));
@@ -208,6 +276,13 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(50, 350), new paper.Point(50, 360));
             leftArrow.rotate(-75, new paper.Point(50, 350));
             rightArrow.rotate(-140, new paper.Point(50, 350));
+            var typeLabel = new paper.PointText({
+                content: 'ISTP',
+                point: new paper.Point(20, 380),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
             break;
         case "ENFJ":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(200, 400));
@@ -215,6 +290,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(200, 400), new paper.Point(200, 410));
             leftArrow.rotate(-115, new paper.Point(200, 400));
             rightArrow.rotate(-190, new paper.Point(200, 400));
+            var typeLabel = new paper.PointText({
+                content: 'ENFJ',
+                point: new paper.Point(180, 420),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "INFJ":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(150, 450));
@@ -222,6 +305,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(150, 450), new paper.Point(150, 460));
             leftArrow.rotate(-110, new paper.Point(150, 450));
             rightArrow.rotate(-195, new paper.Point(150, 450));
+            var typeLabel = new paper.PointText({
+                content: 'INFJ',
+                point: new paper.Point(125, 475),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
 
         //Cholerics
@@ -231,6 +322,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(350, 300), new paper.Point(350, 310));
             leftArrow.rotate(85, new paper.Point(350, 300));
             rightArrow.rotate(165, new paper.Point(350, 300));
+            var typeLabel = new paper.PointText({
+                content: 'ESFP',
+                point: new paper.Point(330, 325),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "ISFP":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(300, 350));
@@ -238,6 +337,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(300, 350), new paper.Point(300, 360));
             leftArrow.rotate(-165, new paper.Point(300, 350));
             rightArrow.rotate(105, new paper.Point(300, 350));
+            var typeLabel = new paper.PointText({
+                content: 'ISFP',
+                point: new paper.Point(285, 375),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "ENTJ":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(450, 400));
@@ -245,6 +352,14 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(450, 400), new paper.Point(450, 410));
             leftArrow.rotate(85, new paper.Point(450, 400));
             rightArrow.rotate(165, new paper.Point(450, 400));
+            var typeLabel = new paper.PointText({
+                content: 'ENTJ',
+                point: new paper.Point(435, 425),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
+
             break;
         case "INTJ":
             typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(400, 450));
@@ -252,12 +367,19 @@ function drawTypeLine(type){
             rightArrow = new paper.Path.Line(new paper.Point(400, 450), new paper.Point(400, 460));
             leftArrow.rotate(180, new paper.Point(400, 450));
             rightArrow.rotate(90, new paper.Point(400, 450));
+            var typeLabel = new paper.PointText({
+                content: 'INTJ',
+                point: new paper.Point(390, 475),
+                fillColor: 'black',
+                fontSize : 16,
+                name : 'type_label',
+            });
             break;
 
         default:
             return;
     }
-    var typeLineGroup = new paper.Group(typeLine, leftArrow, rightArrow);
+    var typeLineGroup = new paper.Group(typeLine, leftArrow, rightArrow, typeLabel);
     typeLineGroup.style = {
         strokeColor : 'black'
     };
