@@ -9,20 +9,29 @@
 </body>
 
 <template name="search">
+    <input type="text" name="input_search" class="form-control"  placeholder="Search our database...">
     <div id='type_bar'>
         <div id='sanguine'>
+            {{#each sanguines}}
+                <a href='#'>{{type}}</a>
+            {{/each}}
         </div>
         <div id='phlegmatics'>
+            {{#each phlegmatics}}
+                <a href='#'>{{type}}</a>
+            {{/each}}
         </div>
         <div id='cholerics'>
+            {{#each cholerics}}
+                <a href='#'>{{type}}</a>
+            {{/each}}
         </div>
         <div id='melancholics'>
+            {{#each melancholics}}
+                <a href='#'>{{type}}</a>
+            {{/each}}
         </div>
     </div>
-    {{#each types}}
-        <a href='#'>{{type}}</a>
-    {{/each}}
-    <input type="text" name="input_search" class="form-control"  placeholder="Search our database...">
     {{#each people}}
         <li>{{name}} </li>
         <li>{{type}}</li>

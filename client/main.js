@@ -40,15 +40,30 @@ Template.search.helpers({
         }
     },
     sanguines() {
-        
+       let san = Types.find({ id: { $in: [ 1, 5, 12, 14 ] } });
+       if (san) {
+           return san;
+       }
     },
     phlegmatics() {
+       let phl = Types.find({ id: { $in: [ 2, 6, 11, 13 ] } });
+       if (phl) {
+           return phl;
+       }
 
     },
     cholerics() {
+       let cho = Types.find({ id: { $in: [ 4, 8, 9, 15 ] } });
+       if (cho) {
+           return cho;
+       }
 
     },
     melancholics() {
+       let mel = Types.find({ id: { $in: [ 3, 7, 10, 16 ] } });
+       if (mel) {
+           return mel;
+       }
 
     }
 });
