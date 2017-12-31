@@ -1,1 +1,54 @@
 /* CSS declarations go here */
+
+body {
+
+    margin: 0px;
+
+}
+
+#left_content {
+
+
+    width : 40%;
+    height: 100%;
+    position: fixed;
+
+}
+
+#right_content {
+
+    width: 60%;
+    height: 100%;
+    margin-left: 40%;
+    position: fixed;
+    overflow-y: auto;
+
+}
+
+#welcome {
+
+    text-align: center;
+
+}
+
+#search_bar {
+
+    width: 200px;
+    margin: auto;
+    display: block;
+
+}
+
+#type_bar {
+
+}
+
+
+
+#pathCanvas {
+
+    margin-top: 10px;
+
+}
+
+

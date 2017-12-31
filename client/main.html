@@ -3,45 +3,46 @@
 </head>
 
 <body>
-    <h1>Welcome to The Type Project homepage!</h1>
-    {{> search}}
-    {{> pathPage}}
+    {{> search }}
 </body>
 
 <template name="search">
-    <input type="text" name="input_search" class="form-control"  placeholder="Search our database...">
-    <div id='type_bar'>
-        <div id='sanguine'>
-            {{#each sanguines}}
-                <a href='#'>{{type}}</a>
-            {{/each}}
+    <div id='left_content'>
+        <h1 id='welcome'>Welcome to The Type Project homepage!</h1>
+        <input id='search_bar' type="text" name="input_search" class="form-control"  placeholder="Search our database...">
+        <div id='type_bar'>
+            <p>Quick Search Links</p>
+            <div id='sanguine'>
+                {{#each sanguines}}
+                    <a href='#'>{{type}}</a>
+                {{/each}}
+            </div>
+            <div id='phlegmatics'>
+                {{#each phlegmatics}}
+                    <a href='#'>{{type}}</a>
+                {{/each}}
+            </div>
+            <div id='cholerics'>
+                {{#each cholerics}}
+                    <a href='#'>{{type}}</a>
+                {{/each}}
+            </div>
+            <div id='melancholics'>
+                {{#each melancholics}}
+                    <a href='#'>{{type}}</a>
+                {{/each}}
+            </div>
         </div>
-        <div id='phlegmatics'>
-            {{#each phlegmatics}}
-                <a href='#'>{{type}}</a>
-            {{/each}}
-        </div>
-        <div id='cholerics'>
-            {{#each cholerics}}
-                <a href='#'>{{type}}</a>
-            {{/each}}
-        </div>
-        <div id='melancholics'>
-            {{#each melancholics}}
-                <a href='#'>{{type}}</a>
-            {{/each}}
-        </div>
+        <canvas id="pathCanvas" width="300" height="300"></canvas>
     </div>
-    {{#each people}}
-        <li>{{name}} </li>
-        <li>{{type}}</li>
-    {{/each}}
+    <div id='right_content'>
+        {{#each people}}
+            <li>{{name}} </li>
+            <li>{{type}}</li>
+        {{/each}}
+    </div>
 </template>
 
-<template name="pathPage">
-    <h1>Path</h1>
-    <canvas id="pathCanvas" width="500" height="500"></canvas>
-</template>
  
 
 

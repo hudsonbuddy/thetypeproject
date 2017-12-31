@@ -94,7 +94,7 @@ Template.search.events({
 
 });
 
-Template.pathPage.rendered = function() {
+Template.search.rendered = function() {
     if(!this._rendered) {
         this._rendered = true;
         setupPlane();
@@ -108,28 +108,28 @@ function setupPlane(){
     paper.setup(canvasPath);
 
     //Draw coordinate lines
-    var xline = new paper.Path.Line(new paper.Point(0, 250), new paper.Point(500,250));
-    var yline = new paper.Path.Line(new paper.Point(250, 0), new paper.Point(250, 500));
+    var xline = new paper.Path.Line(new paper.Point(0, 150), new paper.Point(300, 150));
+    var yline = new paper.Path.Line(new paper.Point(150, 0), new paper.Point(150, 300));
     
     //Draw hash marks
 
-    var xhash1 = new paper.Path.Line(new paper.Point(242, 50), new paper.Point(258, 50));
-    var xhash2 = new paper.Path.Line(new paper.Point(242, 100), new paper.Point(258, 100));
-    var xhash3 = new paper.Path.Line(new paper.Point(242, 150), new paper.Point(258, 150));
-    var xhash4 = new paper.Path.Line(new paper.Point(242, 200), new paper.Point(258, 200));
-    var xhash5 = new paper.Path.Line(new paper.Point(242, 300), new paper.Point(258, 300));
-    var xhash6 = new paper.Path.Line(new paper.Point(242, 350), new paper.Point(258, 350));
-    var xhash7 = new paper.Path.Line(new paper.Point(242, 400), new paper.Point(258, 400));
-    var xhash8 = new paper.Path.Line(new paper.Point(242, 450), new paper.Point(258, 450));
+    var xhash1 = new paper.Path.Line(new paper.Point(145, 30), new paper.Point(155, 30));
+    var xhash2 = new paper.Path.Line(new paper.Point(145, 60), new paper.Point(155, 60));
+    var xhash3 = new paper.Path.Line(new paper.Point(145, 90), new paper.Point(155, 90));
+    var xhash4 = new paper.Path.Line(new paper.Point(145, 120), new paper.Point(155, 120));
+    var xhash5 = new paper.Path.Line(new paper.Point(145, 180), new paper.Point(155, 180));
+    var xhash6 = new paper.Path.Line(new paper.Point(145, 210), new paper.Point(155, 210));
+    var xhash7 = new paper.Path.Line(new paper.Point(145, 240), new paper.Point(155, 240));
+    var xhash8 = new paper.Path.Line(new paper.Point(145, 270), new paper.Point(155, 270));
 
-    var yhash1 = new paper.Path.Line(new paper.Point(50, 242), new paper.Point(50, 258));
-    var yhash2 = new paper.Path.Line(new paper.Point(100, 242), new paper.Point(100, 258));
-    var yhash3 = new paper.Path.Line(new paper.Point(150, 242), new paper.Point(150, 258));
-    var yhash4 = new paper.Path.Line(new paper.Point(200, 242), new paper.Point(200, 258));
-    var yhash5 = new paper.Path.Line(new paper.Point(300, 242), new paper.Point(300, 258));
-    var yhash6 = new paper.Path.Line(new paper.Point(350, 242), new paper.Point(350, 258));
-    var yhash7 = new paper.Path.Line(new paper.Point(400, 242), new paper.Point(400, 258));
-    var yhash8 = new paper.Path.Line(new paper.Point(450, 242), new paper.Point(450, 258));
+    var yhash1 = new paper.Path.Line(new paper.Point(30, 145), new paper.Point(30, 155));
+    var yhash2 = new paper.Path.Line(new paper.Point(60, 145), new paper.Point(60, 155));
+    var yhash3 = new paper.Path.Line(new paper.Point(90, 145), new paper.Point(90, 155));
+    var yhash4 = new paper.Path.Line(new paper.Point(120, 145), new paper.Point(120, 155));
+    var yhash5 = new paper.Path.Line(new paper.Point(180, 145), new paper.Point(180, 155));
+    var yhash6 = new paper.Path.Line(new paper.Point(210, 145), new paper.Point(210, 155));
+    var yhash7 = new paper.Path.Line(new paper.Point(240, 145), new paper.Point(240, 155));
+    var yhash8 = new paper.Path.Line(new paper.Point(270, 145), new paper.Point(270, 155));
 
     //Group all the shit together and set the color to black so it will appear
     var planeGroup = new paper.Group(xline, yline, xhash1, xhash2, xhash3, xhash4, xhash5, xhash6, xhash7, xhash8, yhash1, yhash2, yhash3, yhash4, yhash5, yhash6, yhash7, yhash8);
@@ -140,14 +140,14 @@ function setupPlane(){
     //Write axis labels
     var nAxis= new paper.PointText({
         content: 'N',
-        point: new paper.Point(270, 20),
+        point: new paper.Point(162, 12),
         fillColor: 'black',
         fontSize : 18,
     });
 
     var tAxis= new paper.PointText({
         content: 'T',
-        point: new paper.Point(470, 230),
+        point: new paper.Point(282, 138),
         fillColor: 'black',
         fontSize : 18,
     });
@@ -164,14 +164,14 @@ function drawTypeLine(type){
     switch(type){
         //Sanguine
         case "ISTJ":
-            typeLine = new paper.Path.Line(new paper.Point(250, 250), new paper.Point(400,200));
-            leftArrow = new paper.Path.Line(new paper.Point(400, 200), new paper.Point(400,210));
-            rightArrow = new paper.Path.Line(new paper.Point(400, 200), new paper.Point(400,210));
-            leftArrow.rotate(45, new paper.Point(400, 200));
-            rightArrow.rotate(95, new paper.Point(400, 200));
+            typeLine = new paper.Path.Line(new paper.Point(150, 150), new paper.Point(240, 120));
+            leftArrow = new paper.Path.Line(new paper.Point(240, 120), new paper.Point(240, 126));
+            rightArrow = new paper.Path.Line(new paper.Point(240, 120), new paper.Point(240, 126));
+            leftArrow.rotate(45, new paper.Point(240, 120));
+            rightArrow.rotate(95, new paper.Point(240, 120));
             var typeLabel = new paper.PointText({
                 content: 'ISTJ',
-                point: new paper.Point(390, 190),
+                point: new paper.Point(234, 114),
                 fillColor: 'black',
                 fontSize : 16,
                 name : 'type_label',
